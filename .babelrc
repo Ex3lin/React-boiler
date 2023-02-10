@@ -1,0 +1,35 @@
+//тут накидаем пресетиков для того чтобы разные браузеры кушали
+//наш код без лишних усилий
+{
+    //пресеты, которые будут использоваться
+    "presets": [
+      [
+        "@babel/preset-env",
+        {"modules": false}
+      ],
+      "@babel/preset-typescript",
+      "@babel/preset-react"
+    ],
+    //настройки окружения для бабы
+    "env": {
+      "development": {
+        "plugins": [
+          "react-hot-loader/babel"
+        ]
+      }
+    },
+    //используемые плагины
+    "plugins": [
+      "@babel/plugin-transform-runtime",
+      "@babel/proposal-class-properties",
+      "babel-plugin-styled-components",
+      [
+        "module-resolver",
+        {
+          "alias": {
+            "@": "./src"
+          }
+        }
+      ]
+    ]
+  }
